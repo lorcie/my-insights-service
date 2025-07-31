@@ -1,0 +1,31 @@
+networks:
+  demo:
+
+services:
+  insights-mcp-server:
+    build:
+      context: ./insights-mcp-server
+#     dockerfile: insights-mcp-server/Dockerfile
+    restart: unless-stopped
+    environment:
+      - qloo.base.url=https://hackathon.api.qloo.com/
+      - qloo.api.key=YOUR_QLOO_API_KEY_HERE
+    ports:
+      - 8090:8090
+    command: ["java", "-Dqloo.base.url=https://hackathon.api.qloo.com/", "-Dqloo.api.key=YOUR_QLOO_API_KEY_HERE", "-jar",  "target/insights-mcp-server-0.0.1-SNAPSHOT.jar"]
+    networks: ['demo']
+  
+  my-insights-agent:
+    build:
+      context: ./insights-agent-mcp-client
+    hostname: insights-agent-mcp-client
+    environment:
+      - MCP_PROXY_URL=http://insights-mcp-server:8090/sse
+      - GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY_HERE
+    ports:
+      - 8080:8080
+      - 8091:8091
+    networks: ['demo']
+
+
+
