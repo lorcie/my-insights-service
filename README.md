@@ -221,3 +221,8 @@ It can be combined easily with **Insights MCP server** interacting in real time 
 
 Use **Docker Container Images** with **Docker Compose** to build, debug and Test on your local development environment
 
+**Claude Desktop** extended with MCP server enables to ineract with remote service from local desktop
+
+**N8N** automation tool can be integrated also with MCP server to enable LLM Agent interactive exchange and possible combination with various modules.
+
+
