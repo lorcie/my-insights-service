@@ -19,7 +19,7 @@
 
 ## Introduction <a name="introduction"></a>
 
-This project combines **Google Agent Development Kit** Java Application with **ModelContextProtocol** MCP server based on **Qloo Insights API** by SSE, in order to enable users to search for tag / audiences types and/or get Entities recommendation based on the user criteria filter
+This project proposes various integrations  ( **Google Agent Development Kit** Java Application, **Claude Desktop** MCP server confiruation, **N8N** Automation tool) to a custom Insights  **ModelContextProtocol** MCP server based on **Qloo Insights API** by SSE, in order to enable users to search for tag / audiences types and/or get Entities recommendation based on the user criteria filter
 
 Some details about Architecture, Usage and Screenshots (executions, codesets samples) are presented below.
 
@@ -110,6 +110,16 @@ List Tools on Cloud Run >
 Cloud Run Services >
 
 ![MyInsightsService Cloud Run Services](https://github.com/lorcie/my-insights-service/blob/master/assets/my-insights-service-cloud-run-services.png?raw=true)
+
+
+Claude Desktop Usage >
+
+![Claude Desktop Usage](https://github.com/lorcie/my-insights-service/blob/master/assets/insights-mcp-server-claude-desktop.png?raw=true)
+
+
+N8N Automation Usage >
+
+![N8N Automation usage](https://github.com/lorcie/my-insights-service/blob/master/assets/my-insights-service-mcp-server-n8n.png?raw=true)
 
 
 ## Codeset Files <a name="codeset-files"></a>
